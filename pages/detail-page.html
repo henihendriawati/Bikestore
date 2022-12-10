@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/frontend/libraries/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/bikestore/frontend/libraries/bootstrap/css/bootstrap.css">
     <!--My Css-->
-    <link rel="stylesheet" href="/frontend/style/detailpage.css">
+    <link rel="stylesheet" href="/bikestore/frontend/style/main.css">
 
     <!-- Google Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 
     <title>Detail Page</title>
   </head>
-  <link rel="icon" type="image/x-icon" href="/frontend/img/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/bikestore/frontend/img/favicon.png">
   <body>
 <!--Header-->
     <header>
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Categories</a>
+              <a class="nav-link" href="/index.html">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product</a>
+              <a class="nav-link" href="/index.html">Product</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sign Up</a>
@@ -70,15 +70,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <img src="/frontend/img/detail-product1.png" class="detail-product-img-big">
+                    <img src="/bikestore/frontend/img/detail-product1.png" class="detail-product-img-big">
                 </div>
                 <div class="col-1"></div>
                 <div class="col-2">
                     <div class="product-image-kecil">
-                        <img src="/frontend/img/detail-product2.png" class="detail-product-img-small">
-                        <img src="/frontend/img/detail-product2.png" class="detail-product-img-small">
-                        <img src="/frontend/img/detail-product2.png" class="detail-product-img-small">
-                        <img src="/frontend/img/detail-product2.png" class="detail-product-img-small">
+                        <img src="/bikestore/frontend/img/detail-product2.png" class="detail-product-img-small">
+                        <img src="/bikestore/frontend/img/detail-product2.png" class="detail-product-img-small">
+                        <img src="/bikestore/frontend/img/detail-product2.png" class="detail-product-img-small">
+                        <img src="/bikestore/frontend/img/detail-product2.png" class="detail-product-img-small">
                     </div>
                 </div>
             </div>
@@ -115,6 +115,7 @@
                    <div class="booking-bike border border-secondary">
                     <h3>Booking Bike</h3>
                     <h2>RP100.000.000</h2>
+                    <form id="form1" runat="server">                   
                     <label for=color-select>color <br>
                       <select class="color" id="color-select">
                         <option>Black</option>
@@ -122,10 +123,37 @@
                         <option>Yellow</option>
                         <option>Silver</option>
                       </select>
+
+  
+                      <div class="increament-size" style="margin: 15px;">
+                        <div class="row">
+                        <input type="button" style="    background-color: #1ABC9C;
+                        color: white;
+                        border: none;
+                        width: 15%;" onclick="incrementDropDownList();" value="-" />
+                        
+                        <select name="size" id="size" style="width:205px;border-radius:0px;text-align: center;" >
+                          <option>Select Size</option>
+                          <option value="9:00">S</option>
+                          <option value="12:00">M</option>
+                          <option value="16:00">L</option>
+                          <option value="22:00">XL</option>
+                        </select>
+                        <input type="button" style="    background-color: #1ABC9C;
+                        color: white;
+                        border: none;
+                        width: 15%;" 
+                        onclick="incrementDropDownList();" value="+" />
+                        </div>
+
+                      </div>
+                    
+
                         <label>
-                   <a href="/pages/booking-page.html">
-                   <div class="btn btn-primary">Continue to Book</div>
-                   </a>
+                        <a href="booking-page.html">
+                        <div class="btn btn-primary">Continue to Book</div>
+                        </a>
+                    </form>
                 </div>
 
                 </div>
@@ -151,7 +179,7 @@
               <div class="col-3">
                 <a href="#" class="component-products d-block">
                 <div class="products-img mb-4">
-                  <img src="/frontend/img/popular-product1.png" class="img-fluid">
+                  <img src="/bikestore/frontend/img/popular-product1.png" class="img-fluid">
                 </div>
                 <div class="products-text mb-2">
                   Speach Steatlh
@@ -164,7 +192,7 @@
             <div class="col-3">
               <a href="#" class="component-products d-block">
               <div class="products-img mb-4">
-                <img src="/frontend/img/popular-product2.png" class="img-fluid">
+                <img src="/bikestore/frontend/img/popular-product2.png" class="img-fluid">
               </div>
               <div class="products-text mb-2">
                 Speach Steatlh
@@ -177,7 +205,7 @@
           <div class="col-3">
             <a href="#" class="component-products d-block">
             <div class="products-img mb-4">
-              <img src="/frontend/img/popular-product3.png" class="img-fluid">
+              <img src="/bikestore/frontend/img/popular-product3.png" class="img-fluid">
             </div>
             <div class="products-text mb-2">
               Speach Steatlh
@@ -190,7 +218,7 @@
         <div class="col-3">
           <a href="#" class="component-products d-block">
           <div class="products-img mb-4">
-            <img src="/frontend/img/popular-product4.png" class="img-fluid">
+            <img src="/bikestore/frontend/img/popular-product4.png" class="img-fluid">
           </div>
           <div class="products-text mb-2">
             Speach Steatlh
@@ -207,7 +235,7 @@
         <div class="col-3">
           <a href="#" class="component-products d-block">
           <div class="products-img mb-4">
-            <img src="/frontend/img/popular-product5.png" class="img-fluid">
+            <img src="/bikestore/frontend/img/popular-product5.png" class="img-fluid">
           </div>
           <div class="products-text mb-2">
             Speach Steatlh
@@ -220,7 +248,7 @@
         <div class="col-3">
           <a href="#" class="component-products d-block">
           <div class="products-img mb-4">
-            <img src="/frontend/img/popular-product6.png" class="img-fluid">
+            <img src="/bikestore/frontend/img/popular-product6.png" class="img-fluid">
           </div>
           <div class="products-text mb-2">
             Speach Steatlh
@@ -233,7 +261,7 @@
         <div class="col-3">
           <a href="#" class="component-products d-block">
           <div class="products-img mb-4">
-            <img src="/frontend/img/popular-product7.png" class="img-fluid">
+            <img src="/bikestore/frontend/img/popular-product7.png" class="img-fluid">
           </div>
           <div class="products-text mb-2">
             Speach Steatlh
@@ -246,7 +274,7 @@
       <div class="col-3">
         <a href="#" class="component-products d-block">
         <div class="products-img mb-4">
-          <img src="/frontend/img/popular-product8.png" class="img-fluid">
+          <img src="/bikestore/frontend/img/popular-product8.png" class="img-fluid">
         </div>
         <div class="products-text mb-2">
           Speach Steatlh
@@ -270,14 +298,14 @@
         <div class="row">
           <div class="col-4">
             <div class="testimonial-hero">
-              <img src="/frontend/img/testimonial-img.png" class="testimonial-img">
-              <img src="/frontend/img/testimonial-frame.png" class="testimonial-frame"">
+              <img src="/bikestore/frontend/img/testimonial-img.png" class="testimonial-img">
+              <img src="/bikestore/frontend/img/testimonial-frame.png" class="testimonial-frame"">
             </div>
           </div>
           <div class="col-1"></div>
           <div class="col-7 my-auto">
             <div class="stars">
-              <img src="/frontend/img/testimonial-star.png">
+              <img src="/bikestore/frontend/img/testimonial-star.png">
             </div>
             <h2 class="testimonial-text">BIKESTORE "GOES TO <br> CAMPUS" X UIR . . .</h2>
             <P class="testimonial-name">Sandicha Dwi Ramadhan</P>
@@ -296,13 +324,13 @@
             <div class="col-6">
               <h2>BIKESTORE</h2>
               <a href="#">
-                <img src="/frontend/img/social1.png">
+                <img src="/bikestore/frontend/img/social1.png">
               </a>
               <a href="#">
-                <img src="/frontend/img/social2.png">
+                <img src="/bikestore/frontend/img/social2.png">
               </a>
               <a href="#">
-                <img src="/frontend/img/social3.png">
+                <img src="/bikestore/frontend/img/social3.png">
               </a>
             </div>
             <div class="col-6 text-right">
@@ -331,8 +359,25 @@
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="/frontend/libraries/bootstrap/js/bootstrap.js"></script>
+    <script src="/bikestore/frontend/libraries/bootstrap/js/bootstrap.js"></script>
     
+    <script type="text/javascript">
+
+    function incrementDropDownList()
+    {
+     var dropDownListRef = document.getElementById('size');
+     var selectedIndex = dropDownListRef.selectedIndex;
+    
+     selectedIndex++;
+    
+     if ( selectedIndex >= dropDownListRef.options.length )
+      selectedIndex = 0;
+    
+     dropDownListRef.selectedIndex = selectedIndex;
+    }
+      document.forms[0].size.selectedIndex = +1; 
+    // -->
+    </script>
 
   </body>
 </html>
